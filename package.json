@@ -1,7 +1,7 @@
 {
-  "name": "niu_components",
-  "version": "0.1.0",
-  "private": true,
+  "name": "niu-c",
+  "version": "0.1.2",
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -23,7 +23,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build:tsup": "tsup"
   },
   "eslintConfig": {
     "extends": [
@@ -62,6 +63,26 @@
     "prop-types": "15.8.1",
     "storybook": "7.5.1",
     "tailwindcss": "^3.3.5",
+    "tsup": "^7.2.0",
     "webpack": "5.89.0"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "xxx"
+  },
+  "keywords": [
+    "wahyu",
+    "agus",
+    "arifin",
+    "niu-c"
+  ],
+  "author": "wahyu agus arifin",
+  "license": "ISC"
 }
