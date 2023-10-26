@@ -1,9 +1,9 @@
-import Text from "./components/Text";
+import { useColor } from "niu-assets-origin";
 function App() {
+  const { Slate } = useColor()
   return (
     <div>
-      <Text color="red" size="xl" value="abcde" />
-      <p className="text-red-600">NIU Components</p>
+      <p className="text-red-600">{Slate[300]} NIU Components</p>
     </div>
   );
 }

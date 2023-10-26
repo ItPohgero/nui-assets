@@ -1,7 +1,5 @@
-import React from 'react'
 import { ButtonProps } from '../interface/ButtonProps'
-
-const Button = (props: ButtonProps) => {
+export function Button(props: ButtonProps): any {
     const {
         onClick,
         type,
@@ -45,5 +43,3 @@ const Button = (props: ButtonProps) => {
         <button type={type} onClick={onClick} className={`rounded-full ${Variant(variant)} ${Size(size)}`}>{label}</button>
     )
 }
-
-export default Button
