@@ -288,7 +288,6 @@ export const color: ColorProps = {
     }
 }
 
-function useColor() {
+export function useColor(): ColorProps {
     return color
 }
-export default useColor

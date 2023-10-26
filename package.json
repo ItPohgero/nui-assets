@@ -1,5 +1,5 @@
 {
-  "name": "niu-c",
+  "name": "niu-assets-origin",
   "version": "0.1.2",
   "private": false,
   "dependencies": {
@@ -75,7 +75,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "xxx"
+    "url": "https://github.com/ItPohgero/nui-assets.git"
   },
   "keywords": [
     "wahyu",
