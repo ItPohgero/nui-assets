@@ -9,6 +9,7 @@ const meta = {
             options: ['button', 'submit'],
             control: { type: 'radio' },
         },
+        size: { control: { type: 'radio' }},
         onClick: { action: 'clicked' }
     },
 } satisfies Meta<typeof Button>;
@@ -19,5 +20,7 @@ type Story = StoryObj<typeof meta>;
 export const Example1: Story = {
     args: {
         type: 'button',
+        label: "Button",
+        variant: 'primary'
     }
 };
