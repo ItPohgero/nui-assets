@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import useColor, { color } from '../hooks/useColor';
+import { color, useColor } from '../hooks/useColor';
 
 describe('useColor Hooks', () => {
     test('I want to get Slate 100', () => {
