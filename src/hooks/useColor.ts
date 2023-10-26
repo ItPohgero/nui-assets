@@ -1,5 +1,5 @@
 import { ColorProps } from "../interface/ColorProps";
-const color: ColorProps = {
+export const color: ColorProps = {
     Slate: {
         50: "#f8fafc",
         100: "#f1f5f9",

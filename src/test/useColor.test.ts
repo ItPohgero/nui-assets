@@ -1,10 +1,10 @@
 import { describe, expect, test } from '@jest/globals';
-import useColor from '../hooks/useColor';
+import useColor, { color } from '../hooks/useColor';
 
 describe('useColor Hooks', () => {
     test('I want to get Slate 100', () => {
         const { Slate } = useColor()
-        expect(Slate[100]).toBe("#f1f5f9");
+        expect(Slate[100]).toBe(color.Slate[100]);
     });
     test('I want to get Rose 800', () => {
         const { Rose } = useColor()
