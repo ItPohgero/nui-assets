@@ -17,10 +17,17 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Example1: Story = {
+export const Primary: Story = {
     args: {
         type: 'button',
         label: "Button",
         variant: 'primary'
+    }
+};
+export const Secondary: Story = {
+    args: {
+        type: 'button',
+        label: "Button",
+        variant: 'secondary'
     }
 };
