@@ -9516,10 +9516,10 @@ neo-async@^2.5.0, neo-async@^2.6.1, neo-async@^2.6.2:
   resolved "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-niu-assets-origin@^0.1.3, niu-assets-origin@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.npmjs.org/niu-assets-origin/-/niu-assets-origin-0.1.4.tgz"
-  integrity sha512-YW3mC1kmNXX4kqhkuG1AeIdQZxSnyOqlJg3vKYOSLT5xaC3reGXT08Cy2fhQe2KppSP2xNPWzJiXn+Ny1q1Y6g==
+niu-assets-origin@^0.1.4, niu-assets-origin@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.npmjs.org/niu-assets-origin/-/niu-assets-origin-0.1.5.tgz"
+  integrity sha512-12JzyHbUTRBq6CQiT5eawTjO6kq74yex1SbUY0utyWZAW9/8c96OE+Z8xS576ZJLhBRIiangghE2jYT6lffcWg==
   dependencies:
     "@testing-library/jest-dom" "^5.14.1"
     "@testing-library/react" "^13.0.0"
@@ -9528,7 +9528,7 @@ niu-assets-origin@^0.1.3, niu-assets-origin@^0.1.4:
     "@types/node" "^16.7.13"
     "@types/react" "^18.0.0"
     "@types/react-dom" "^18.0.0"
-    niu-assets-origin "^0.1.3"
+    niu-assets-origin "^0.1.4"
     react "^18.2.0"
     react-dom "^18.2.0"
     react-if "^4.1.5"
