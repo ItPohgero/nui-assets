@@ -1,3 +1,5 @@
+import { TableColumn, TableColumnSummary } from "../components"
+
 export const DataTable = [
     {
         name: "wahyu",
@@ -6,23 +8,17 @@ export const DataTable = [
 ]
 
 export const ColumnsTable = [
-    {
-        title: "name",
-        dataIndex: "name"
-    },
-    {
-        title: "Age",
-        dataIndex: "age"
-    },
+    TableColumn({
+        title: "abdi",
+        data: "name"
+    }),
+    TableColumn({
+        title: "abdi",
+        data: "name"
+    }),
 ]
 
 export const SummaryTable = [
-    {
-        col: 1,
-        value: "Total"
-    },
-    {
-        col: 1,
-        value: "3"
-    },
+    TableColumnSummary(1, "total"),
+    TableColumnSummary(1, "87"),
 ]
