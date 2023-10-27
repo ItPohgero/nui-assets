@@ -20,9 +20,6 @@ export function Table(props: TableProps): any {
         title: <strong>No</strong>,
         render: (_: any, __: any, u: number) => {
             let value = u + 1
-            console.log("cc", currentPage);
-            console.log(value);
-
             let no = value
             if (value) {
                 if (useTableProps?.options?.pagination) {
