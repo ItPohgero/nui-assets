@@ -11,17 +11,16 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Example: Story = (args: any) => {
-    const useTableProps = useTable({
-        summary: SummaryTable,
-        options: {
-            bordered: true,
-            pagination: true
-        },
-        data: DataTable,
-        columns: ColumnsTable
-    });
-
-    return <Table {...args} useTableProps={useTableProps} />;
+export const ExampleXXS: Story = {
+    args: {
+        useTableProps: useTable({
+            summary: SummaryTable,
+            options: {
+                bordered: true,
+                pagination: true
+            },
+            data: DataTable,
+            columns: ColumnsTable
+        })
+    }
 };
-Example.args = {};
