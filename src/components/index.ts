@@ -1,3 +1,6 @@
 export * from "./Button"
-export * from "./Text"
+export * from "./Checkbox"
 export * from "./DatePicker"
+export * from "./DatePickerRange"
+export * from "./Table"
+export * from "./Text"

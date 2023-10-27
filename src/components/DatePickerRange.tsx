@@ -2,7 +2,7 @@ import { DatePicker } from "antd"
 import AntdProvider from '../theme/antd.provider'
 import { DatePickerRangeProps } from "../interface/DatePickerRangeProps"
 
-const DatePickerRange = (props: DatePickerRangeProps) => {
+export function DatePickerRange(props: DatePickerRangeProps): any {
     const {
         picker
     } = props
@@ -15,5 +15,3 @@ const DatePickerRange = (props: DatePickerRangeProps) => {
         </AntdProvider>
     )
 }
-
-export default DatePickerRange

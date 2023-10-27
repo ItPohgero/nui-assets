@@ -3,7 +3,7 @@ import AntdProvider from '../theme/antd.provider'
 import { DatePickerProps } from '../interface/DatePickerProps'
 import { useDatePicker } from "../hooks/useDatePicker"
 
-const DatePicker = (props: DatePickerProps) => {
+export function DatePicker(props: DatePickerProps): any {
     const {
         picker
     } = props
@@ -24,5 +24,3 @@ const DatePicker = (props: DatePickerProps) => {
         </AntdProvider>
     )
 }
-
-export default DatePicker
