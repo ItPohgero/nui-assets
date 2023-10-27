@@ -1,9 +1,10 @@
 import { Checkbox as CheckboxAntd } from "antd"
 import AntdProvider from "../theme/antd.provider"
-const Checkbox = () => {
+import { CheckboxProps } from "../interface/CheckboxProps"
+const Checkbox = (props: CheckboxProps) => {
     return (
         <AntdProvider>
-            <CheckboxAntd>Checkbox</CheckboxAntd>
+            <CheckboxAntd {...props} />
         </AntdProvider>
     )
 }
