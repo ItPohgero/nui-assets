@@ -10,6 +10,8 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "antd": "^5.10.2",
+    "dayjs": "^1.11.10",
     "niu-assets-origin": "^0.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -23,7 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 9006",
     "build-storybook": "storybook build",
     "build:tsup": "tsup",
     "up": "react-scripts build && react-scripts test && tsup"
