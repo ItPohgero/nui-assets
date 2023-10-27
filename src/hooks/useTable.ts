@@ -16,7 +16,7 @@ export interface UseTableProps {
     y?: number
   }
 }
-export const useTable = (props: UseTableProps): any => {
+export function useTable(props: UseTableProps): any {
   const { data, summary, columns, options, scroll } = props
   return { data, summary, columns, options, scroll }
 }

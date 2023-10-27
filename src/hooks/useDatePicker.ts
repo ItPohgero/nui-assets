@@ -8,7 +8,7 @@ interface PresetsProps {
 interface UseDatePickerProps {
     presets?: PresetsProps[]
 }
-export const useDatePicker = (props: UseDatePickerProps) => {
+export function useDatePicker (props: UseDatePickerProps) {
     const presets = props?.presets?.map((dt: PresetsProps, index: any) => {
         const type = dt?.type === 'day' ? 'd' : 'month'
         return {
