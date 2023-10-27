@@ -57,7 +57,7 @@ export function Table(props: TableProps): any {
                             current={currentPage}
                             total={data?.length}
                             onChange={(page: any, pageSize: any) => {
-                                // OnChangePagination(page, pageSize)
+                                props?.OnChangePagination(page, pageSize)
                                 setCurrentPage(page)
                                 setLimitPage(pageSize)
                             }}
