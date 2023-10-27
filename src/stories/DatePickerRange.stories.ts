@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import DatePickerRange from '../components/DatePickerRange';
 const meta = {
-    title: 'Example/DatePickerRange',
+    title: 'NIU/DatePicker/Range',
     component: DatePickerRange,
     tags: ['autodocs'],
     argTypes: {
