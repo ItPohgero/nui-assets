@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Table } from '../components';
 import { useTable } from '../hooks';
+import { ColumnsTable, DataTable, SummaryTable } from '../data/table';
 const meta = {
     title: 'NIU/Table/Core',
     component: Table,
@@ -12,35 +13,13 @@ type Story = StoryObj<typeof meta>;
 
 export const Example: Story = (args: any) => {
     const useTableProps = useTable({
-        summary: [
-            {
-                col: 1,
-                value: "Total"
-            },
-            {
-                col: 1,
-                value: "3"
-            },
-        ],
+        summary: SummaryTable,
         options: {
-            pagination: false
+            bordered: true,
+            pagination: true
         },
-        data: [
-            {
-                name: "wahyu",
-                age: 2
-            }
-        ],
-        columns: [
-            {
-                title: "name",
-                dataIndex: "name"
-            },
-            {
-                title: "Age",
-                dataIndex: "age"
-            },
-        ]
+        data: DataTable,
+        columns: ColumnsTable
     });
 
     return <Table {...args} useTableProps={useTableProps} />;
