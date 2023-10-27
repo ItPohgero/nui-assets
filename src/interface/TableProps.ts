@@ -1,6 +1,7 @@
 import { UseTableProps } from "../hooks"
 
 export interface TableProps {
+    widthNumber?: boolean
     useTableProps: UseTableProps
-    onChangePagination?: (page: number, pageSize: number) => void
+    OnChangePagination?: any
 }

@@ -1,32 +1,70 @@
+import React from 'react'
 import { Pagination, Table as TableAntd } from "antd"
 import AntdProvider from "../theme/antd.provider"
 import { TableProps } from "../interface/TableProps"
-import { UseTableOptionProps, useRandom } from "../hooks"
+import { useRandom } from "../hooks"
 import { Summary } from "../helper/Summary"
 import { If, Then } from "react-if"
 
 export function Table(props: TableProps): any {
-    const { useTableProps, onChangePagination } = props
+    const { widthNumber, useTableProps } = props
     const { data, columns, summary }: any = useTableProps
     const { x, y }: any = useTableProps?.scroll || {};
+
+    const [currentPage, setCurrentPage] = React.useState<number>(1)
+    const [limitPage, setLimitPage] = React.useState<number>(10)
+    const Number = {
+        key: useRandom(),
+        width: "5%",
+        align: "center",
+        title: <strong>No</strong>,
+        render: (_: any, __: any, u: number) => {
+            let value = u + 1
+            console.log("cc", currentPage);
+            console.log(value);
+
+            let no = value
+            if (value) {
+                if (useTableProps?.options?.pagination) {
+                    if (currentPage > 1) {
+                        no = currentPage * limitPage - limitPage + value
+                    }
+                }
+            }
+            return no
+        },
+    }
+
+    const DataColumn = widthNumber ? [Number, ...columns] : columns
+    const Pagi = useTableProps?.options?.pagination
+    const DataRender = data?.slice(0, limitPage)
     return (
         <AntdProvider>
             <TableAntd
+                {...props}
                 className="rounded-2xl"
                 bordered={useTableProps?.options?.bordered ?? true}
                 pagination={false}
                 scroll={{ x, y }}
-                dataSource={data}
-                columns={columns}
+                dataSource={DataRender}
+                columns={DataColumn}
                 summary={() => <Summary fixed data={summary} />}
+                rowClassName={(_: any, idx: any) => {
+                    return idx >= limitPage ? 'bg-red-500 text-white' : ''
+                }}
             />
-            <If condition={useTableProps?.options?.pagination ?? true}>
+            <If condition={Pagi ?? true}>
                 <Then>
                     <div className="flex justify-start items-center w-full">
                         <Pagination
-                            onChange={onChangePagination}
+                            current={currentPage}
+                            total={data?.length}
+                            onChange={(page: any, pageSize: any) => {
+                                // OnChangePagination(page, pageSize)
+                                setCurrentPage(page)
+                                setLimitPage(pageSize)
+                            }}
                             className="mt-8"
-                            total={139}
                             showSizeChanger
                             showQuickJumper
                             showTotal={(total) => `Total ${total} items`}

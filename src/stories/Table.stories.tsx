@@ -24,7 +24,7 @@ export const Example: Story = (args: any) => {
         columns: ColumnsTable,
     });
 
-    return <Table {...args} useTableProps={useTableProps} />;
+    return <Table widthNumber {...args} useTableProps={useTableProps} />;
 };
 
 Example.args = {};
