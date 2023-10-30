@@ -1,4 +1,5 @@
 import { TableColumn, TableColumnSummary } from "../components"
+import { Switch } from "../components/Switch"
 
 export const DataTable = [
     {
@@ -586,7 +587,8 @@ export const ColumnsTable = [
     }),
     TableColumn({
         title: "Age",
-        data: "age"
+        data: "age",
+        render: (text: string) => <Switch/>,
     }),
 ]
 

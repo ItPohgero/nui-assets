@@ -77,16 +77,21 @@ interface TableColumnProps {
     title?: string,
     data: any
     sorter?: boolean
+    render?: any
 }
 export function TableColumn(props: TableColumnProps): any {
-    const { title, sorter, data } = props
-    return {
+    const { title, sorter, data, render } = props
+    const columnConfig: any = {
         key: useRandom(),
         dataIndex: data,
         title: title && <strong>{title}</strong>,
         sorter: sorter ? { compare: () => true } : false,
         ...props,
     }
+    if (render) {
+        columnConfig.render = render;
+    }
+    return columnConfig;
 }
 
 
