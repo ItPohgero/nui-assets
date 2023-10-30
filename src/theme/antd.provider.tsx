@@ -12,11 +12,15 @@ const AntdProvider = ({ children }: { children: React.ReactNode }) => {
                 colorBgContainer: Slate[50],
             },
             components: {
+                Table: {},
+                Switch: {
+                    trackMinWidth: 20,
+                },
                 Checkbox: {
                     borderRadius: 5,
                     algorithm: true,
                 },
-            }
+            },
         }}>
             {children}
         </ConfigProvider>

@@ -588,7 +588,7 @@ export const ColumnsTable = [
     TableColumn({
         title: "Age",
         data: "age",
-        render: (text: string) => <Switch/>,
+        render: () => <Switch/>,
     }),
 ]
 
