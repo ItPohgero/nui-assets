@@ -1,6 +1,6 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react';
-import { Table } from '../components';
+import { Input, Spacer, Table } from '../components';
 import { useTable as useTableCore } from '../hooks';
 import { ColumnsTable, DataTable, SummaryTable } from '../data/table';
 import { useSearch } from '../hooks/useSearch';
@@ -35,10 +35,10 @@ export const Example: Story = (args: any) => {
         columns: ColumnsTable,
     });
 
-
     return (
         <div>
-            <input className='bg-slate-200 py-1 mb-6 border-none focus:border-none active:border-none' onChange={(e: any) => setSearch(e?.target?.value)} />
+            <Input suffix='app' onChange={(e: any) => setSearch(e)} />
+            <Spacer size={20}/>
             <Table widthNumber {...args} useTableProps={useTableProps} OnChangePagination={() => { }} />
         </div>
     );
