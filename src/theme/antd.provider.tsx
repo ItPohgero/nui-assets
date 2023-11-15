@@ -1,6 +1,6 @@
 import { ConfigProvider } from 'antd'
 import React from 'react'
-import { color, useColor } from '../hooks'
+import { useColor } from '../hooks'
 
 const AntdProvider = ({ children }: { children: React.ReactNode }) => {
     const { Slate } = useColor();

@@ -5,7 +5,6 @@ import { TableProps } from "../interface/TableProps"
 import { useRandom } from "../hooks"
 import { Summary } from "../helper/Summary"
 import { If, Then } from "react-if"
-import { useSearch } from '../hooks/useSearch'
 
 export function Table(props: TableProps): any {
     const { widthNumber, useTableProps } = props
