@@ -24,7 +24,7 @@ export function TestHook(): any {
             key: '2',
             label: 'useColor',
             children: (
-              <div className="grid grid-cols-6">
+              <div className="grid grid-cols-6 gap-4">
                 <div style={{ backgroundColor: Rose[500] }} className="text-white flex justify-center items-center rounded-lg h-20 w-full">Rose.500</div>
                 <div style={{ backgroundColor: Blue[500] }} className="text-white flex justify-center items-center rounded-lg h-20 w-full">Blue.500</div>
               </div>
