@@ -5,12 +5,36 @@ import { tokenExample } from "../data/jwtExample";
 import { useColor } from "./useColor";
 import { useRandom } from "./useRandom";
 import { useDay } from "./useDay";
+import { useClient, getData } from "./useClient";
+import { useEffect, useState } from "react";
 
 export function TestHook(): any {
   const resJWT = useJWTDecode(tokenExample)
   const { Rose, Blue } = useColor();
   const resRandom = useRandom(20);
   const day = useDay()
+  const api = useClient({
+    baseURL: "https://jsonplaceholder.typicode.com",
+    token: "Bearer wahyu",
+    headers: [
+      {
+        key: "X-Screen-Id",
+        value: "xxx"
+      }
+    ]
+  })
+
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response: any = await getData({ api, endpoint: "/todos/1" });
+        console.log("aabbccdd", response);        
+        setData(response);
+      } catch (error) {}
+    }
+    fetchData();
+  }, []);  
   return (
     <div>
       <Collapse
