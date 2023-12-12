@@ -26,15 +26,14 @@ export function TestHook(): any {
 
   const [data, setData] = useState(null);
   useEffect(() => {
-    async function fetchData() {
+    ((async () => {
       try {
         const response: any = await getData({ api, endpoint: "/todos/1" });
-        console.log("aabbccdd", response);        
+        console.log("aabbccdd", response);
         setData(response);
-      } catch (error) {}
-    }
-    fetchData();
-  }, []);  
+      } catch (error) { }
+    })());
+  }, []);
   return (
     <div>
       <Collapse
