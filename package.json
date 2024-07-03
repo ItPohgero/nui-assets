@@ -1,6 +1,6 @@
 {
   "name": "niu-assets-origin",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^6.1.5",
@@ -32,7 +32,10 @@
     "storybook": "storybook dev -p 9006",
     "build-storybook": "storybook build",
     "build:tsup": "tsup",
-    "up": "react-scripts build && react-scripts test && tsup"
+    "up:without-test": "react-scripts build && tsup",
+    "up": "react-scripts build && react-scripts test && tsup",
+    "local-update": "yarn build:tsup && yalc publish",
+    "force:push": "git add . && git commit -m \" up\" && git push"
   },
   "eslintConfig": {
     "extends": [
