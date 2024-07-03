@@ -40,6 +40,9 @@ export function Button(props: ButtonProps): any {
         }
     }
     return (
-        <button type={type} onClick={onClick} className={`rounded-full ${Variant(variant)} ${Size(size)}`}>{label}</button>
+        <button type={type} onClick={onClick} style={{
+            backgroundColor: 'red',
+            padding: 10
+        }} className={`rounded-full ${Variant(variant)} ${Size(size)}`}>{label}</button>
     )
 }
